@@ -1,0 +1,15 @@
+[package]
+name = "sorting"
+version = "0.1.0"
+authors = ["Max Blachman <blachmanmax@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "sorting"
+path = "src/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+quickcheck = "0.9"
+quickcheck_macros = "0.9"
