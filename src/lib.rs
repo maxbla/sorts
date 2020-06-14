@@ -5,10 +5,10 @@
 extern crate quickcheck_macros;
 
 pub mod quicksort {
-    //use std::ptr::copy_nonoverlapping;
-    //use std::cmp::Ordering::{Greater, Less, Equal};
-
-    // panics if arr is empty
+    /// Finds the median of the first, last and middle elements of an array
+    ///
+    /// returns the index of this element
+    /// panics if arr is empty
     fn median_pivot<T: Ord>(arr: &[T]) -> usize {
         let last = arr.len() - 1;
         let mid = arr.len() / 2;
@@ -20,7 +20,7 @@ pub mod quicksort {
     }
 
     // panics if arr is small (empty or )
-    pub(crate) fn partition<'a, T: Ord>(arr: &'a mut [T]) -> (&'a mut [T], &'a mut [T]) {
+    pub(crate) fn partition<T: Ord>(arr: &mut [T]) -> (&mut [T], &mut [T]) {
         let pivot_idx = median_pivot(arr);
         //move pivot to end of array
         arr.swap(pivot_idx, arr.len() - 1);
